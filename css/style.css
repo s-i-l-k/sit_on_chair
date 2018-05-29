@@ -1,0 +1,564 @@
+@font-face {
+    font-family: 'ralewaybold';
+    src: url('../fonts/raleway/raleway-bold.woff2') format('woff2'),
+    url('../fonts/raleway/raleway-bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'ralewaylight';
+    src: url('../fonts/raleway/raleway-light.woff2') format('woff2'),
+    url('../fonts/raleway/raleway-light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'ralewayregular';
+    src: url('../fonts/raleway/raleway-regular.woff2') format('woff2'),
+    url('../fonts/raleway/raleway-regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: ralewayregular, sans-serif;
+}
+
+/*layout*/
+header, section, footer {
+    width: 1200px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+/*header*/
+
+header {
+    height: 40px;
+    line-height: 40px;
+    background-color: black;
+    color: white;
+    font-size: 13px;
+    letter-spacing: 1.1px;
+}
+
+.logo {
+    float: left;
+    text-transform: uppercase;
+    margin-left: 70px;
+}
+
+.important_text {
+    color: #24ba9f;
+    font-family: ralewaybold, sans-serif;
+}
+
+nav {
+    float: right;
+    margin-right: 77px;
+    font-weight: bold;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    font-family: ralewaybold, sans-serif;
+}
+
+nav ul li {
+    display: inline-block;
+    text-transform: uppercase;
+    list-style-type: none;
+    cursor: pointer;
+}
+
+nav ul li+li {
+    margin-left: 38px;
+}
+
+.slider {
+    height: 505px;
+    background: rgb(255,255,255); /* Old browsers */
+    background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(203,202,207,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(203,202,207,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(203,202,207,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#cbcacf',GradientType=0 ); /* IE6-9 */
+}
+
+.slider > div {
+    float: left;
+}
+
+.slider .nav {
+    color: #24ba9f;
+    font-size: 70px;
+    line-height: 505px;
+    padding: 0 40px 0 70px;
+    cursor: pointer;
+}
+
+.slider .right {
+    padding: 0 40px 0 80px;
+}
+
+.slider .img {
+    background-image: url("../images/black_chair.png");
+    width: 400px;
+    height: 505px;
+    background-size: 148%;
+    background-repeat: no-repeat;
+    background-position: 60% 80%
+}
+
+.slider .product_description {
+    width: 445px;
+    text-align: center;
+    margin: 134px 0 0 0;
+    font-family: ralewayregular, sans-serif;
+}
+
+.slider .product_description h1 {
+    font-size: 37px;
+    margin: 0;
+    letter-spacing: 1.1px;
+}
+
+.slider .product_description p {
+    padding: 20px;
+    font-size: 14px;
+    line-height: 1.5em;
+    letter-spacing: 1.1px;
+}
+
+.slider .product_description button {
+    background-color: #24ba9f;
+    border-radius: 12px;
+    border: none;
+    color: white;
+    font-size: 24px;
+    padding: 15px 40px;
+    font-family: ralewayregular, sans-serif;
+}
+
+/*3 boxes*/
+
+.boxes {
+    height: 330px;
+    padding-top: 24px;
+}
+
+.boxes > div {
+    width: 330px;
+    height: 225px;
+    float: left;
+    box-sizing: border-box;
+}
+
+.boxes > div:first-child {
+    margin-left: 65px;
+    background-image: url("../images/box1_img.jpg");
+}
+
+.boxes > div:nth-child(2) {
+    background-image: url("../images/box2_img.jpg");
+}
+
+.boxes > div:nth-child(3){
+    width: 340px;
+    height: 255px;
+    border: 1px solid lightgrey;
+}
+
+.boxes div+div {
+    margin-left: 28px;
+}
+
+.boxes .bar {
+    position: relative;
+    margin-top: 150px;
+    background: rgba(255,255,255,0.4);
+    width: 100%;
+    padding: 14px 25px 25px 17px;
+    font-size: 16px;
+    font-family: ralewaybold, sans-serif;
+}
+
+.boxes .bar span::after {
+    content: "";
+    border-bottom: 7px solid #24ba9f;
+    width: 140px;
+    display: block;
+    position: absolute;
+}
+
+.boxes .top {
+    margin-top: 15px;
+    padding-left: 20px;
+    width: 340px;
+    box-sizing: border-box;
+}
+
+.boxes .top p {
+    font-family: ralewaylight, sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    padding-top: 8px;
+}
+
+/*pricelist*/
+
+.pricelist {
+    background-color: #F1F1F1;
+}
+
+.plan {
+    height: 635px;
+    font-family: ralewayregular, sans-serif;
+    margin-left: 65px;
+}
+
+.pricelist h2 {
+    padding-top: 43px;
+    padding-left: 65px;
+    color: #575757;
+    font-size: 20px;
+    line-height: 35px;
+    letter-spacing: 1.1px;
+}
+
+.pricelist h2::after {
+    content: "";
+    border-bottom: 7px solid #24ba9f;
+    width: 330px;
+    display: block;
+    position: absolute;
+}
+
+.column {
+    width: 328px;
+    height: 500px;
+    margin-top: 65px;
+    float: left;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.column+.column {
+    margin-left: 33px;
+}
+
+.basic {
+    background-color: #F9F9F9;
+    border: 2px solid lightgrey;
+}
+
+.column .circle_decoration {
+    width: 53px;
+    height: 53px;
+    border-radius: 50%;
+    border: 2px solid lightgrey;
+    position: absolute;
+    margin: -38px 135px;
+    background-color: white;
+}
+
+.column .white {
+    border: 2px solid lightgrey;
+    background-color: white;
+}
+
+.column .circle_decoration div {
+    width: 27px;
+    height: 27px;
+    border-radius: 50%;
+    position: absolute;
+    top: 13px;
+    left: 13px;
+}
+
+.column .white .grey {
+    background-color: silver;
+}
+
+.standard {
+    background-color: #24ba9f;
+    border: 2px solid #24ba9f;
+}
+
+.column .green {
+    border: 2px solid #24ba9f;
+    background-color: #24ba9f;
+}
+
+.column .plain {
+    background-color: white;
+}
+
+.column h3 {
+    text-align: center;
+    margin-top: 24px;
+    font-size: 24px;
+    color: #29ba9f;
+    font-family: ralewaylight, sans-serif;
+}
+
+.standard h3 {
+    color: white;
+}
+
+.price {
+    width: 125px;
+    height: 125px;
+    border-radius: 50%;
+    border: 2px solid lightgrey;
+    text-align: center;
+    margin: 25px auto;
+    font-weight: bold;
+    color:silver;
+    background-color: white;
+}
+
+plan .middle {
+    color: #29ba9f;
+}
+
+.plan .second {
+    border-color: #29ba9f;
+}
+
+.price_value {
+    text-align: center;
+    margin-top: 25px;
+    font-family: ralewaybold, sans-serif;
+    font-size: 45px;
+}
+
+.price_value sup {
+    vertical-align: 25px;
+    font-size: 14px;
+}
+
+.price_unit {
+    font-size: 16px;
+}
+
+.details {
+    width: 100%;
+    font-size: 24px;
+    text-align: center;
+    line-height: 45px;
+    color: grey;
+    padding-top: 15px;
+}
+
+.grey_details {
+    height: 45px;
+    background-color: #e2e2e2;
+}
+
+.lightgrey_details {
+    height: 45px;
+    background-color: #F1F1F1;
+}
+
+.white_details {
+    height: 45px;
+    background-color: white;
+}
+
+.column button {
+    position: absolute;
+    bottom: 15px;
+    width: 125px;
+    height: 35px;
+    left: 105px;
+    border-radius: 10px;
+    font-size: 16px;
+    background-color: #29ba9f;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button.center {
+    background-color: white;
+    color: #29ba9f;
+}
+
+/*kontakt*/
+
+.contact {
+    position: relative;
+    height: 530px;
+}
+
+.contact h2 {
+    padding-top: 10px;
+    padding-left: 65px;
+    color: #575757;
+    font-size: 20px;
+    line-height: 35px;
+    letter-spacing: 1.1px;
+}
+
+.contact h2::after {
+    content: "";
+    border-bottom: 7px solid #24ba9f;
+    width: 330px;
+    display: block;
+    position: absolute;
+}
+
+.contact form label input, textarea {
+    outline: none;
+}
+
+.contact label {
+    position: absolute;
+    left: 72px;
+}
+
+.contact form label:nth-child(1) {
+    float: left;
+    top: 98px;
+    height: 66px;
+}
+.contact form label:nth-child(1) input {
+    font-size: 34px;
+    width: 636px;
+    padding: 14px 0 9px 11px;
+    font-family: ralewayregular, sans-serif;
+    box-sizing: border-box;
+    border: 1px solid #29ba9f;
+}
+
+.contact form label:nth-child(2) {
+    float: left;
+    top: 190px;
+}
+
+.contact form label:nth-child(2) input {
+    font-size: 34px;
+    width: 635px;
+    padding: 14px 0 9px 11px;
+    font-family: ralewayregular, sans-serif;
+    box-sizing: border-box;
+    border: 1px solid #29ba9f;
+}
+
+.contact form label:nth-child(3) {
+    float: left;
+    top: 280px;
+}
+
+.contact form label:nth-child(3) textarea {
+    font-size: 34px;
+    width: 635px;
+    padding: 11px 0 16px 11px;
+    font-family: ralewayregular, sans-serif;
+    box-sizing: border-box;
+    border: 1px solid #29ba9f;
+}
+
+
+textarea[name=message] {
+    resize: none;
+}
+
+.contact form .check {
+    display: block;
+    width: 350px;
+    height: 58px;
+    position: absolute;
+    top: 315px;
+    left: 758px;
+    font-size: 20px;
+    line-height: 21px;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.contact form .check input {
+    float: left;
+    display: block;
+    width: 49px;
+    height: 49px;
+    margin-right: 13px;
+    margin-top: -2px;
+    margin-left: 6px;
+    background-color: white;
+    border: none;
+}
+
+.contact form .check input[type=checkbox] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border: 1px solid #29ba9f;
+}
+
+.contact form .check input[type=checkbox]:checked {
+    background: url("../images/form_ok.jpg") no-repeat -2px 6px;
+    border: 1px solid #29ba9f;
+}
+
+.contact form input[name=send] {
+    position: absolute;
+    bottom: 60px;
+    right: 94px;
+    width: 343px;
+    height: 71px;
+    border: none;
+    border-radius: 10px;
+    font-family: ralewaybold, sans-serif;
+    font-size: 32px;
+    background-color: #29ba9f;
+    color: white;
+    cursor: pointer;
+}
+
+.contact img {
+    position: absolute;
+    top: 70px;
+    right: 154px;
+}
+
+/*footer*/
+
+footer {
+    height: 100px;
+}
+
+.footerText {
+    float: left;
+    margin-right: 278px;
+    margin-left: 68px;
+    margin-top: 40px;
+    word-spacing: 4px;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+footer img {
+    display: block;
+    float: left;
+    padding-top: 25px;
+    padding-left: 5px;
+    cursor: pointer;
+}
+
+.footerLogo {
+    float: right;
+    margin-right: 80px;
+    padding-top: 35px;
+    font-size: 21px;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.important_text2 {
+    font-family: ralewaybold, sans-serif;
+}
