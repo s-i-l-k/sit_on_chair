@@ -72,16 +72,53 @@ nav ul {
     font-family: ralewaybold, sans-serif;
 }
 
-nav ul li {
+nav > ul > li {
     display: inline-block;
     text-transform: uppercase;
     list-style-type: none;
     cursor: pointer;
+    position: relative;
 }
 
-nav ul li+li {
+nav > ul > li+li {
     margin-left: 38px;
 }
+
+/*dropdown menu*/
+
+
+.dropdown {
+    display: none;
+    list-style-type: none;
+    position: absolute;
+    top: 35px;
+    right: -35px;
+}
+
+.dropdown > ul > li {
+    width: 110px;
+    height: 32px;
+    background-color: black;
+    text-align: left;
+    line-height: 32px;
+    padding-left: 15px;
+    text-transform: capitalize;
+    font-family: ralewayregular, sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.dropdown-square {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    top: 10px;
+    margin: 0 auto;
+    background-color: black;
+    transform: rotate(45deg);
+}
+
+/*slider*/
 
 .slider {
     height: 505px;
