@@ -881,3 +881,7 @@ footer img {
 .title {
     height: 30px;
 }
+
+.visible {
+    display: block;
+}
