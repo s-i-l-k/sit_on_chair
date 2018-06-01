@@ -145,7 +145,12 @@ nav > ul > li+li {
     padding: 0 40px 0 80px;
 }
 
-.slider .img {
+.slider .images {
+    width: 400px;
+    height: 505px;
+}
+
+.images ul li.img_black {
     background-image: url("../images/black_chair.png");
     width: 400px;
     height: 505px;
@@ -154,27 +159,52 @@ nav > ul > li+li {
     background-position: 60% 80%
 }
 
-.slider .product_description {
+.images ul li.img_orange {
+    background-image: url("../images/orange_chair.png");
+    width: 400px;
+    height: 505px;
+    background-size: 125%;
+    background-repeat: no-repeat;
+    background-position: 60% 80%
+}
+
+.images ul {
+    list-style: none;
+}
+
+.images ul li {
+    display: none;
+    height: 200px;
+    width: 80px;
+    margin-top: -20px;
+    margin-left: -50px;
+}
+
+.images .visible {
+    display: inline-block;
+}
+
+.product_description {
     width: 445px;
     text-align: center;
     margin: 134px 0 0 0;
     font-family: ralewayregular, sans-serif;
 }
 
-.slider .product_description h1 {
+.product_description h1 {
     font-size: 37px;
     margin: 0;
     letter-spacing: 1.1px;
 }
 
-.slider .product_description p {
+.product_description p {
     padding: 20px;
     font-size: 14px;
     line-height: 1.5em;
     letter-spacing: 1.1px;
 }
 
-.slider .product_description button {
+.product_description button {
     background-color: #24ba9f;
     border-radius: 12px;
     border: none;
@@ -182,6 +212,7 @@ nav > ul > li+li {
     font-size: 24px;
     padding: 15px 40px;
     font-family: ralewayregular, sans-serif;
+    cursor: pointer;
 }
 
 /*3 boxes*/
@@ -217,7 +248,7 @@ nav > ul > li+li {
     margin-left: 28px;
 }
 
-.boxes .bar {
+.bar {
     position: relative;
     margin-top: 150px;
     background: rgba(255,255,255,0.4);
@@ -225,9 +256,10 @@ nav > ul > li+li {
     padding: 14px 25px 25px 17px;
     font-size: 16px;
     font-family: ralewaybold, sans-serif;
+    box-sizing: border-box;
 }
 
-.boxes .bar span::after {
+.bar span::after {
     content: "";
     border-bottom: 7px solid #24ba9f;
     width: 140px;
@@ -235,14 +267,14 @@ nav > ul > li+li {
     position: absolute;
 }
 
-.boxes .top {
+.top {
     margin-top: 15px;
     padding-left: 20px;
     width: 340px;
     box-sizing: border-box;
 }
 
-.boxes .top p {
+.top p {
     font-family: ralewaylight, sans-serif;
     font-size: 14px;
     line-height: 20px;
@@ -362,7 +394,7 @@ nav > ul > li+li {
     background-color: white;
 }
 
-plan .middle {
+.plan .middle {
     color: #29ba9f;
 }
 
