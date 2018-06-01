@@ -168,6 +168,15 @@ nav > ul > li+li {
     background-position: 60% 80%
 }
 
+.images ul li.img_red {
+    background-image: url("../images/red_chair.png");
+    width: 400px;
+    height: 505px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: 60% 60%
+}
+
 .images ul {
     list-style: none;
 }

@@ -74,11 +74,7 @@ document.addEventListener("DOMContentLoaded", function() {
     for(var i=0; i<arrows.length; i++) {
         arrows[i].addEventListener("click", function () {
             var drop_menu = this.nextElementSibling;
-            if(drop_menu.classList.contains("visible")) {
-                drop_menu.classList.remove("visible");
-            } else {
-                drop_menu.classList.add("visible");
-            }
+            drop_menu.classList.toggle("visible");
 
         });
     }
