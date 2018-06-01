@@ -67,6 +67,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
     /*calculator*/
 
+    /*dropdown-list*/
+
     var arrows = document.querySelectorAll(".list_arrow");
 
     for(var i=0; i<arrows.length; i++) {
@@ -80,4 +82,60 @@ document.addEventListener("DOMContentLoaded", function() {
 
         });
     }
+
+    /*choose dropdown-list elements*/
+
+    var dropdownList = document.querySelectorAll(".list_panel li");
+    console.log(dropdownList);
+
+    for(var i=0; i<dropdownList.length; i++) {
+        /*change color*/
+        dropdownList[i].addEventListener("mouseover", function () {
+            this.style.color = "#29ba9f"
+        });
+    }
+
+    for(var i=0; i<dropdownList.length; i++) {
+        /*change color*/
+        dropdownList[i].addEventListener("mouseout", function () {
+            this.style.color = "#585858"
+        });
+    }
+
+    /*add to cart*/
+
+    var leftPanel = document.querySelector(".panel_left");
+    var children = leftPanel.children;
+    var uls = document.querySelectorAll(".list_panel");
+    var title = uls[0];
+    var titleChildren = title.children;
+    var color = uls[1];
+    var colorChildren = color.children;
+    var pattern = uls[2];
+    var patternChildren = pattern.children;
+
+    for(var i=0; i<titleChildren.length; i++) {
+
+        titleChildren[i].addEventListener("click", function () {
+            children[0].innerText = this.innerText;
+            this.parentElement.classList.remove("visible");
+        });
+    }
+
+    for(var i=0; i<colorChildren.length; i++) {
+
+        colorChildren[i].addEventListener("click", function () {
+            children[1].innerText = this.innerText;
+            this.parentElement.classList.remove("visible");
+        });
+    }
+
+    for(var i=0; i<patternChildren.length; i++) {
+
+        patternChildren[i].addEventListener("click", function () {
+            children[2].innerText = this.innerText;
+            this.parentElement.classList.remove("visible");
+        });
+    }
+
 });

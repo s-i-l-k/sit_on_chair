@@ -813,6 +813,7 @@ footer img {
 .panel_left h4 , .panel_right h4{
     color: #24baa0;
     font-size: 23px;
+    margin: 0;
 }
 
 .panel_left span{
