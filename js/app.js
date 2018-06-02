@@ -123,6 +123,9 @@ document.addEventListener("DOMContentLoaded", function() {
         titleChildren[i].addEventListener("click", function () {
             leftPanelChildren[0].innerText = this.innerText;
             this.parentElement.classList.remove("visible");
+            this.parentElement.previousElementSibling.previousElementSibling.innerText = this.innerText;
+            this.parentElement.previousElementSibling.previousElementSibling.parentElement.style.backgroundColor = "#f9f9f9";
+            this.parentElement.previousElementSibling.previousElementSibling.style.color = "grey";
 
             if (this.innerText === "Clair") {
                 rightPanelChildren[0].innerText = 200;
@@ -142,6 +145,9 @@ document.addEventListener("DOMContentLoaded", function() {
         colorChildren[i].addEventListener("click", function () {
             leftPanelChildren[1].innerText = this.innerText;
             this.parentElement.classList.remove("visible");
+            this.parentElement.previousElementSibling.previousElementSibling.innerText = this.innerText;
+            this.parentElement.previousElementSibling.previousElementSibling.parentElement.style.backgroundColor = "#f9f9f9";
+            this.parentElement.previousElementSibling.previousElementSibling.style.color = "grey";
 
             if (this.innerText === "Czerwony") {
                 rightPanelChildren[1].innerText = 100;
@@ -158,6 +164,9 @@ document.addEventListener("DOMContentLoaded", function() {
         patternChildren[i].addEventListener("click", function () {
             leftPanelChildren[2].innerText = this.innerText;
             this.parentElement.classList.remove("visible");
+            this.parentElement.previousElementSibling.previousElementSibling.innerText = this.innerText;
+            this.parentElement.previousElementSibling.previousElementSibling.parentElement.style.backgroundColor = "#f9f9f9";
+            this.parentElement.previousElementSibling.previousElementSibling.style.color = "grey";
 
             if (this.innerText === "Tkanina") {
                 rightPanelChildren[2].innerText = 0;
