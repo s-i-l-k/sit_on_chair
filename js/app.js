@@ -100,38 +100,85 @@ document.addEventListener("DOMContentLoaded", function() {
 
     /*add to cart*/
 
-    var leftPanel = document.querySelector(".panel_left");
-    var children = leftPanel.children;
+    var leftPanelChildren = document.querySelector(".panel_left").children;
     var uls = document.querySelectorAll(".list_panel");
-    var title = uls[0];
-    var titleChildren = title.children;
-    var color = uls[1];
-    var colorChildren = color.children;
-    var pattern = uls[2];
-    var patternChildren = pattern.children;
+    var titleChildren = uls[0].children;
+    var colorChildren = uls[1].children;
+    var patternChildren = uls[2].children;
+
+    var rightPanelChildren = document.querySelector(".panel_right").children;
+
+    var sum = document.querySelector(".sum");
+
+    function addingPrices() {
+        return cartSum = Number(rightPanelChildren[0].innerText) + Number(rightPanelChildren[1].innerText)
+            + Number(rightPanelChildren[2].innerText) + Number(rightPanelChildren[3].innerText) + " zł";
+    }
+
+    var transport = document.getElementById("transport");
+
 
     for(var i=0; i<titleChildren.length; i++) {
 
         titleChildren[i].addEventListener("click", function () {
-            children[0].innerText = this.innerText;
+            leftPanelChildren[0].innerText = this.innerText;
             this.parentElement.classList.remove("visible");
+
+            if (this.innerText === "Clair") {
+                rightPanelChildren[0].innerText = 200;
+            } else if (this.innerText === "Margarita") {
+                rightPanelChildren[0].innerText = 300;
+            } else {
+                rightPanelChildren[0].innerText = 400;
+            }
+
+            sum.innerText =  addingPrices();
+
         });
     }
 
     for(var i=0; i<colorChildren.length; i++) {
 
         colorChildren[i].addEventListener("click", function () {
-            children[1].innerText = this.innerText;
+            leftPanelChildren[1].innerText = this.innerText;
             this.parentElement.classList.remove("visible");
+
+            if (this.innerText === "Czerwony") {
+                rightPanelChildren[1].innerText = 100;
+            } else {
+                rightPanelChildren[1].innerText = 0;
+            }
+
+            sum.innerText =  addingPrices();
         });
     }
 
     for(var i=0; i<patternChildren.length; i++) {
 
         patternChildren[i].addEventListener("click", function () {
-            children[2].innerText = this.innerText;
+            leftPanelChildren[2].innerText = this.innerText;
             this.parentElement.classList.remove("visible");
+
+            if (this.innerText === "Tkanina") {
+                rightPanelChildren[2].innerText = 0;
+            } else {
+                rightPanelChildren[2].innerText = 150;
+            }
+
+            sum.innerText =  addingPrices();
         });
     }
+
+    transport.addEventListener('click', function () {
+        if (this.checked) {
+            leftPanelChildren[3].innerText = "Transport";
+            rightPanelChildren[3].innerText = Number(transport.dataset.transportPrice);
+        } else {
+            leftPanelChildren[3].innerText = "";
+            rightPanelChildren[3].innerText = "";
+        }
+
+        sum.innerText = addingPrices();
+    })
 
 });
