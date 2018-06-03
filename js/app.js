@@ -115,6 +115,13 @@ document.addEventListener("DOMContentLoaded", function() {
             + Number(rightPanelChildren[2].innerText) + Number(rightPanelChildren[3].innerText) + " zł";
     }
 
+    function chosen(item) {
+        item.parentElement.classList.remove("visible");
+        item.parentElement.previousElementSibling.previousElementSibling.innerText = item.innerText;
+        item.parentElement.previousElementSibling.previousElementSibling.parentElement.style.backgroundColor = "#f9f9f9";
+        item.parentElement.previousElementSibling.previousElementSibling.style.color = "grey";
+        }
+
     var transport = document.getElementById("transport");
 
 
@@ -122,10 +129,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
         titleChildren[i].addEventListener("click", function () {
             leftPanelChildren[0].innerText = this.innerText;
-            this.parentElement.classList.remove("visible");
-            this.parentElement.previousElementSibling.previousElementSibling.innerText = this.innerText;
-            this.parentElement.previousElementSibling.previousElementSibling.parentElement.style.backgroundColor = "#f9f9f9";
-            this.parentElement.previousElementSibling.previousElementSibling.style.color = "grey";
+
+            chosen(this);
 
             if (this.innerText === "Clair") {
                 rightPanelChildren[0].innerText = 200;
@@ -144,10 +149,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
         colorChildren[i].addEventListener("click", function () {
             leftPanelChildren[1].innerText = this.innerText;
-            this.parentElement.classList.remove("visible");
-            this.parentElement.previousElementSibling.previousElementSibling.innerText = this.innerText;
-            this.parentElement.previousElementSibling.previousElementSibling.parentElement.style.backgroundColor = "#f9f9f9";
-            this.parentElement.previousElementSibling.previousElementSibling.style.color = "grey";
+
+            chosen(this);
 
             if (this.innerText === "Czerwony") {
                 rightPanelChildren[1].innerText = 100;
@@ -163,10 +166,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
         patternChildren[i].addEventListener("click", function () {
             leftPanelChildren[2].innerText = this.innerText;
-            this.parentElement.classList.remove("visible");
-            this.parentElement.previousElementSibling.previousElementSibling.innerText = this.innerText;
-            this.parentElement.previousElementSibling.previousElementSibling.parentElement.style.backgroundColor = "#f9f9f9";
-            this.parentElement.previousElementSibling.previousElementSibling.style.color = "grey";
+
+            chosen(this);
 
             if (this.innerText === "Tkanina") {
                 rightPanelChildren[2].innerText = 0;
