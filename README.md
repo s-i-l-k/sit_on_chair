@@ -16,4 +16,4 @@ The second part of the task was to add some JavaScript features:
 * CSS 3
 * JavaScript
 
-Site preview : https://s-i-l-k.github.io/sit_on_chair/
+Site preview [HERE](https://s-i-l-k.github.io/sit_on_chair/)
